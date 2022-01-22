@@ -1,0 +1,6 @@
+server:
+  port: 1800
+
+spring:
+  application:
+    name: nacos-consumer

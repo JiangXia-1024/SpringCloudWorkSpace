@@ -1,0 +1,6 @@
+server:
+  port: 1802
+
+spring:
+  application:
+    name: nacos-service2
