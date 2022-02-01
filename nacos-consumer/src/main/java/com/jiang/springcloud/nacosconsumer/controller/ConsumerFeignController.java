@@ -3,6 +3,7 @@ package com.jiang.springcloud.nacosconsumer.controller;
 import com.jiang.springcloud.nacosconsumer.client.Service1FeignClient;
 import com.jiang.springcloud.nacosconsumer.client.Service2FeignClient;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping("/feign")
+@RefreshScope
 public class ConsumerFeignController {
 
     @Autowired
@@ -50,9 +52,10 @@ public class ConsumerFeignController {
      * @return： No such property: code for class: Script1
      * @description:同时调service1和service2的/service/test接口
      */
-    public String callboth(String orderid){
+    @RequestMapping("/both")
+    public String callboth(String orderid) {
         String res = service1FeignClient.test(orderid);
-        res+="<br/>"+service2FeignClient.test(orderid);
+        res += "<br/>" + service2FeignClient.test(orderid);
         return res;
     }
 }

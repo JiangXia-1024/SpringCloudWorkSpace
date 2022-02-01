@@ -9,8 +9,9 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 public class indexControler {
+
     @GetMapping("/")
-    public String index(){
-        return "/config/get?key=[key]:获取单个配置";
+    public String index() {
+        return "/config/get?key=[key]: 获取单个配置";
     }
 }
