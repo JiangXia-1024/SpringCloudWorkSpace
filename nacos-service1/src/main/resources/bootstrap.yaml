@@ -4,12 +4,12 @@ spring:
   cloud:
     nacos:
       config:
-        server-addr: 127.0.0.1:8850
+        server-addr: 192.168.1.6:8850
         file-extension: yaml
-        namespace: 88799e5e-fce4-4eeb-984b-f2811d0aa702
+        namespace: e4d6fe3f-aab8-430d-a782-0e8a3af710bc
         group: test_group
       discovery:
-        server-addr: 127.0.0.1:8850
-        namespace: 88799e5e-fce4-4eeb-984b-f2811d0aa702
+        server-addr: 192.168.1.6:8850
+        namespace: e4d6fe3f-aab8-430d-a782-0e8a3af710bc
         group: test_group
         ip: 192.168.1.6:8850
